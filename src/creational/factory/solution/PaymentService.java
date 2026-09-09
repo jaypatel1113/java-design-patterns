@@ -6,9 +6,9 @@ import creational.factory.solution.model.PaymentType;
 
 public class PaymentService {
     public void pay (PaymentType type, int amount) {
-        Payment creditCardPayment = PaymentFactory.getPaymentInstance(type);
-        if (creditCardPayment != null) {
-            creditCardPayment.pay(amount);
+        Payment payment = PaymentFactory.getPaymentInstance(type);
+        if (payment != null) {
+            payment.pay(amount);
         } else {
             System.out.println("Payment type not found");
         }
